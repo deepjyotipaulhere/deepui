@@ -1,0 +1,75 @@
+// SCSS version of Button styles
+.deepui-button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: color-contrast(var(--primary-color) vs white, black);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    min-width: 120px;
+    transition: background-color 0.2s;
+    text-align: left;
+    font-family: var(--font-primary);
+
+    &--primary {
+        background-color: var(--primary-color);
+        color: white;
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--primary-color), black 15%);
+        }
+    }
+
+    &--secondary {
+        background-color: var(--secondary-color);
+        color: white;
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--secondary-color), black 15%);
+        }
+    }
+
+    //   &:hover {
+    //     background-color: color-mix(in srgb, var(--primary-color), black 15%);
+    //   }
+
+    &:disabled {
+        background-color: #bdbdbd;
+        color: #f5f5f5;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    >div {
+        width: 100%;
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.deepui-button-spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.deepui-button-spinner {
+    width: 1em;
+    height: 1em;
+    border: 2px solid #FFF;
+    border-bottom-color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: deepui-spin 1s linear infinite;
+}
+
+@keyframes deepui-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,14 +1,20 @@
 
 export interface Theme {
-    colors: {
-        primary: string;
-        secondary: string;
+    typography?: {
+        fontFamily?: string
+    },
+    colors?: {
+        primary?: string;
+        secondary?: string;
     }
 }
 
 export const defaultTheme: Theme = {
+    typography: {
+        fontFamily: 'Schibsted Grotesk,Roboto Condensed'
+    },
     colors: {
-        primary: '#1976d2',
+        primary: '#0047AB',
         secondary: '#dc004e',
     }
 };

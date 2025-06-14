@@ -1,3 +1,5 @@
+/* migrated to SCSS, see header.scss */
+
 .storybook-header {
   display: flex;
   justify-content: space-between;

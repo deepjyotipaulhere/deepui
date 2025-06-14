@@ -11,6 +11,9 @@ export const ThemeProvider = ({ children, theme = defaultTheme }: { children: Re
         const root = document.documentElement;
         root.style.setProperty('--primary-color', theme.colors.primary);
         root.style.setProperty('--secondary-color', theme.colors.secondary);
+        root.style.setProperty('--font-primary', theme.typography.fontFamily);
     }, [theme]);
     return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
 }
+
+export default ThemeProvider;
