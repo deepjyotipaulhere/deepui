@@ -1,0 +1,119 @@
+.deepui-textinput {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+
+    .deepui-input-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        background: #fafafa;
+        border: 1px solid #ccc;
+        border-radius:  var(--border-radius);
+        transition: border 0.2s;
+
+        &:hover {
+            border: 1px solid #888;
+        }
+
+        &:focus-within {
+            border: 1px solid var(--primary-color);
+        }
+    }
+
+    .deepui-prepend,
+    .deepui-append {
+        display: flex;
+        align-items: center;
+        padding: 0 0.5em;
+        color: #888;
+        font-size: 1em;
+        -webkit-user-select: none;
+        user-select: none;
+        background: transparent;
+        height: 100%;
+    }
+
+    .deepui-prepend {
+        margin-right: 0;
+        border-top-left-radius:  var(--border-radius);
+        border-bottom-left-radius:  var(--border-radius);
+    }
+
+    .deepui-append {
+        margin-left: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .deepui-password-toggle {
+        background: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        padding: 0 0.5em;
+        color: #888;
+        font-size: 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .deepui-password-toggle:active,
+    .deepui-password-toggle:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .deepui-input-wrapper input {
+        border: none;
+        outline: none;
+        background: transparent;
+        box-shadow: none;
+        flex: 1 1 0%;
+        min-width: 0;
+        padding: 0.75em 0.5em 0.8em 0.5em;
+    }
+
+    .deepui-input-wrapper input:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .deepui-floating-label {
+        position: absolute;
+        left: 0.5em;
+        top: 0.7em;
+        color: #888;
+        background: #f5f5f5;
+        padding: 0 0.25em;
+        pointer-events: none;
+        font-size: 0.9em;
+        transition: all 0.2s;
+        z-index: 2;
+    }
+
+    .deepui-floating-label.floating {
+        top: -0.7em;
+        left: 0.4em;
+        font-size: 0.7em;
+        color: var(--primary-color, #0078d4);
+        background: white;
+        z-index: 3;
+    }
+
+    input:hover~.deepui-floating-label,
+    input:focus~.deepui-floating-label {
+        background: white;
+    }
+
+    .deepui-helper-text {
+        margin-top: 4px;
+        font-size: 0.75rem;
+    }
+}

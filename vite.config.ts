@@ -38,7 +38,7 @@ export default defineConfig({
                 },
             },
         },
-        cssCodeSplit: false, // Bundle all CSS into a single file
+        cssCodeSplit: true, // Bundle all CSS into a single file
         minify: 'terser',
         terserOptions: {
             compress: {

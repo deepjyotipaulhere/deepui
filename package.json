@@ -1,6 +1,6 @@
 {
   "name": "@deepjyotipaul/deepui",
-  "version": "0.0.14",
+  "version": "0.0.17",
   "description": "DeepUI for Web",
   "main": "./dist/deepui.es.js",
   "types": "./dist/types/index.d.ts",
@@ -16,7 +16,8 @@
     "dev": "vite --root src/pages",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "publish": "npm version patch --no-git-tag-version && vite build && npm publish --access public"
+    "version": "npm version patch --no-git-tag-version",
+    "publish": "vite build && npm publish --access public"
   },
   "keywords": [],
   "author": "",

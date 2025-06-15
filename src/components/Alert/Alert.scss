@@ -1,0 +1,32 @@
+.deepui-alert {
+    padding: 1em;
+    background-color: #efefef;
+    border-radius: calc(var(--border-radius) * 2);
+    border: 1px solid #ddd;
+
+    &-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        // Set color to white if parent has error or success modifier
+        .deepui-alert-error &,
+        .deepui-alert-success & {
+            color: #fff;
+        }
+    }
+
+    span {
+        font-weight: 500;
+    }
+
+    &-error {
+        background-color: #d32f2f;
+        color: #ddd;
+        border-color: #d32f2f;
+    }
+
+    &-success {
+        border-color: green;
+        background-color: #2e7d32;
+        color: #eee;
+    }
+}

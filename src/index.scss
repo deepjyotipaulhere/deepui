@@ -1,9 +1,32 @@
 // SCSS entry point for global styles
+@use './components/Alert/Alert.scss' as *;
 @use './components/Button/Button.scss' as *;
 @use './components/Card/Card.scss' as *;
 @use './components/CardHeader/CardHeader.scss' as *;
 @use './components/CardBody/CardBody.scss' as *;
+@use './components/TextInput/TextInput.scss' as *;
 @use './stories/button.scss' as *;
 @use './stories/header.scss' as *;
 @use './stories/page.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: antialiased;
+    text-rendering: optimizeLegibility;
+    background: linear-gradient(135deg, #e0e7ef 0%, #f5f7fa 100%);
+    min-height: 100vh;
+
+    /* Glassmorphism base layer with 3D effect */
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -1;
+        background: linear-gradient(120deg, #e0e7ef 0%, #f5f7fa 100%);
+        filter: blur(32px) saturate(180%) brightness(1.08);
+        box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.10), 0 1.5px 4px 0 rgba(255,255,255,0.10) inset;
+    }
+}

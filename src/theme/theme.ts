@@ -6,7 +6,8 @@ export interface Theme {
     colors?: {
         primary?: string;
         secondary?: string;
-    }
+    },
+    borderRadius?: number;
 }
 
 export const defaultTheme: Theme = {
@@ -16,5 +17,6 @@ export const defaultTheme: Theme = {
     colors: {
         primary: '#0047AB',
         secondary: '#dc004e',
-    }
+    },
+    borderRadius: 4
 };
