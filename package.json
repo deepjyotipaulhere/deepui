@@ -5,7 +5,7 @@
   "main": "./dist/deepui.es.js",
   "types": "./dist/types/index.d.ts",
   "repository": {
-    "url": "https://github.com/deepjyotipaul/deepui"
+    "url": "https://github.com/deepjyotipaulhere/deepui"
   },
   "files": [
     "dist"
